@@ -30,6 +30,7 @@ function mapRentCastRecord(record: Record<string, unknown>, index: number): Prop
 		longitude: typeof record.longitude === "number" ? record.longitude : undefined,
 		formattedAddress: addr || undefined,
 		yearBuilt: typeof record.yearBuilt === "number" ? record.yearBuilt : undefined,
+		imageUrl: typeof record.imageUrl === "string" ? record.imageUrl : (record.image as string) || undefined,
 	};
 }
 

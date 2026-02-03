@@ -14,6 +14,7 @@ export interface Property {
 	longitude?: number;
 	formattedAddress?: string;
 	yearBuilt?: number;
+	imageUrl?: string;
 }
 
 export interface PropertySearchParams {

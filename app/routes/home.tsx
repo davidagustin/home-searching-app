@@ -221,9 +221,18 @@ function PropertyCard({ property: p }: { property: Property }) {
 	return (
 		<article className="group h-full flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--card-bg)] overflow-hidden shadow-sm hover:shadow-md hover:border-[var(--accent-muted)] transition-all duration-200">
 			<div className="aspect-[4/3] bg-[var(--muted)] relative overflow-hidden">
-				<div className="absolute inset-0 flex items-center justify-center text-[var(--text-muted)] text-sm">
-					No image
-				</div>
+				{p.imageUrl ? (
+					<img
+						src={p.imageUrl}
+						alt={addr}
+						className="w-full h-full object-cover"
+						loading="lazy"
+					/>
+				) : (
+					<div className="absolute inset-0 flex items-center justify-center text-[var(--text-muted)] text-sm">
+						No image
+					</div>
+				)}
 			</div>
 			<div className="p-4 sm:p-5 flex flex-col flex-1">
 				{priceStr && (

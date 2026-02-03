@@ -1,5 +1,9 @@
 import type { Property } from "./property-types";
 
+// High-quality house/property images (Unsplash, free to use)
+const IMG = (id: string) =>
+	`https://images.unsplash.com/photo-${id}?w=600&h=450&fit=crop`;
+
 export const MOCK_PROPERTIES: Property[] = [
 	{
 		id: "mock-1",
@@ -15,6 +19,7 @@ export const MOCK_PROPERTIES: Property[] = [
 		propertyType: "Single Family",
 		formattedAddress: "1247 Oak St, San Francisco, CA 94102",
 		yearBuilt: 1924,
+		imageUrl: IMG("1600596542815-ffad4c1539a9"),
 	},
 	{
 		id: "mock-2",
@@ -30,6 +35,7 @@ export const MOCK_PROPERTIES: Property[] = [
 		propertyType: "Condo",
 		formattedAddress: "88 Marina Blvd, San Francisco, CA 94123",
 		yearBuilt: 2008,
+		imageUrl: IMG("1600585154340-be6161a56f0e"),
 	},
 	{
 		id: "mock-3",
@@ -45,6 +51,7 @@ export const MOCK_PROPERTIES: Property[] = [
 		propertyType: "Single Family",
 		formattedAddress: "452 Clement St, San Francisco, CA 94118",
 		yearBuilt: 1942,
+		imageUrl: IMG("1600607687939-ce8a6c25118c"),
 	},
 	{
 		id: "mock-4",
@@ -60,6 +67,7 @@ export const MOCK_PROPERTIES: Property[] = [
 		propertyType: "Townhouse",
 		formattedAddress: "2100 Broadway, San Francisco, CA 94115",
 		yearBuilt: 1967,
+		imageUrl: IMG("1600566753190-17f0baa2a6c3"),
 	},
 	{
 		id: "mock-5",
@@ -75,6 +83,7 @@ export const MOCK_PROPERTIES: Property[] = [
 		propertyType: "Condo",
 		formattedAddress: "789 Valencia St, San Francisco, CA 94110",
 		yearBuilt: 2012,
+		imageUrl: IMG("1600573473349-811ccaf12d71"),
 	},
 	{
 		id: "mock-6",
@@ -90,5 +99,6 @@ export const MOCK_PROPERTIES: Property[] = [
 		propertyType: "Single Family",
 		formattedAddress: "1560 Stockton St, San Francisco, CA 94133",
 		yearBuilt: 1906,
+		imageUrl: IMG("1600047509807-baeb71bd757d"),
 	},
 ];
