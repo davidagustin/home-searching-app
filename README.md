@@ -1,4 +1,6 @@
-# Welcome to React Router + Cloudflare Workers!
+# Home Search App
+
+Search for homes by city, state, or ZIP. Uses **RentCast** for real property data (free tier: 50 API calls/month). Without an API key, the app shows sample listings so you can try it immediately.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/react-router-starter-template)
 
@@ -47,6 +49,23 @@ npm run dev
 ```
 
 Your application will be available at `http://localhost:5173`.
+
+### Live property data (RentCast API)
+
+1. Sign up at [RentCast](https://rentcast.io) and create an API key (free tier: 50 calls/month).
+2. For **local dev**, create a `.dev.vars` file in the project root (do not commit it):
+
+   ```
+   RENTCAST_API_KEY=your_api_key_here
+   ```
+
+3. For **deployment**, set the secret in Cloudflare:
+
+   ```sh
+   npx wrangler secret put RENTCAST_API_KEY
+   ```
+
+Without `RENTCAST_API_KEY`, the app runs in demo mode with sample listings.
 
 ## Typegen
 
